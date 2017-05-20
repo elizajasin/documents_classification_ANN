@@ -23,16 +23,16 @@ def lemmatization (hadits):
         hadits[i] = stemmer.stem(hadits[i])
     return hadits
 
-# def removePunct (hadits):
-#     punct = list(punctuation)
-#     punct.remove("-")
-#     punct = ''.join(punct)
-#     no_punctional = []
-#     for i in range (0,300):
-#         remove_punct = re.compile('[%s]' % re.escape(punctuation)).sub('',hadits[i])
-#         remove_punct = re.split(r'\s',remove_punct)
-#         no_punctional.append(remove_punct)
-#     return no_punctional
+def removePunct (hadits):
+    punct = list(punctuation)
+    punct.remove("-")
+    punct = ''.join(punct)
+    no_punctional = []
+    for i in range (0,300):
+        remove_punct = re.compile('[%s]' % re.escape(punctuation)).sub('',hadits[i])
+        remove_punct = re.split(r'\s',remove_punct)
+        no_punctional.append(remove_punct)
+    return no_punctional
 
 def stopwordsRemoval (filename,hadits):
     stopword_remove = []
@@ -46,8 +46,8 @@ def stopwordsRemoval (filename,hadits):
         stopword_remove.append(stop_remove)
     return stopword_remove
 
-# def caseFolding (hadits):
-#     for i in range (0,300):
-#         for j in range(len(hadits[i])):
-#             hadits[i][j] = casefold(hadits[i][j])
-#     return hadits
+def caseFolding (hadits):
+    for i in range (0,300):
+        for j in range(len(hadits[i])):
+            hadits[i][j] = casefold(hadits[i][j])
+    return hadits

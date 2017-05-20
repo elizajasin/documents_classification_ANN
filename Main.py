@@ -8,3 +8,5 @@ hadits = PreP.readData('hadits_eliza.xlsx')
 remove_punct = PreP.removePunct(hadits)
 stopword_remove = PreP.stopwordsRemoval('id.stopwords.02.01.2016.txt',remove_punct)
 case_fold = PreP.caseFolding(stopword_remove)
+
+print(case_fold[0][0])
