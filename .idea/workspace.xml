@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a645aaa-234e-4e3f-baac-4b1c4670ed87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReadData.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReadAndWriteFile.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ReadData.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main.py" afterPath="$PROJECT_DIR$/Main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing.py" afterPath="$PROJECT_DIR$/Preprocessing.py" />
     </list>
     <ignored path="TA_Eliza.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,10 +30,10 @@
       <file leaf-file-name="Main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
-                <element signature="e#27#51#0" expanded="true" />
+                <element signature="e#27#61#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -52,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReadData.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReadData.py">
+      <file leaf-file-name="ReadAndWriteFile.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ReadAndWriteFile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+            <state relative-caret-position="204">
+              <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
               <folding>
                 <element signature="e#27#36#0" expanded="true" />
               </folding>
@@ -86,6 +85,7 @@
       <list>
         <option value="$PROJECT_DIR$/Preprocessing.py" />
         <option value="$PROJECT_DIR$/ReadData.py" />
+        <option value="$PROJECT_DIR$/ReadAndWriteFile.py" />
         <option value="$PROJECT_DIR$/Main.py" />
       </list>
     </option>
@@ -388,7 +388,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#27#51#0" expanded="true" />
+            <element signature="e#27#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -408,7 +408,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#27#51#0" expanded="true" />
+            <element signature="e#27#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -428,7 +428,7 @@
         <state relative-caret-position="0">
           <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
-            <element signature="e#27#51#0" expanded="true" />
+            <element signature="e#27#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -448,7 +448,7 @@
         <state relative-caret-position="0">
           <caret line="8" column="83" lean-forward="false" selection-start-line="8" selection-start-column="83" selection-end-line="8" selection-end-column="83" />
           <folding>
-            <element signature="e#27#51#0" expanded="true" />
+            <element signature="e#27#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -468,7 +468,7 @@
         <state relative-caret-position="0">
           <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="26" />
           <folding>
-            <element signature="e#27#51#0" expanded="true" />
+            <element signature="e#27#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -491,16 +491,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReadData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-          <folding>
-            <element signature="e#27#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -511,12 +501,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ReadData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReadAndWriteFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <element signature="e#27#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#27#51#0" expanded="true" />
+            <element signature="e#27#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
