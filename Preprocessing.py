@@ -12,15 +12,16 @@ def readData (filename):
     wb = openpyxl.load_workbook(filename)
     sheet = wb.active
     hadits = []
-    for i in range (2,302):
-        hadits.append(str(sheet.cell(row=i,column=7).value))
+    for i in range (2,102):
+        hadits.append(str(sheet.cell(row=i,column=3).value))
     return hadits
 
 def lemmatization (hadits):
     factory = StemmerFactory()
     stemmer = factory.create_stemmer()
-    for i in range (0,300):
-        hadits[i] = stemmer.stem(hadits[i])
+    for i in range(len(hadits)):
+        for j in range(len(hadits[i])):
+            hadits[i][j] = stemmer.stem(hadits[i][j])
     return hadits
 
 def removePunct (hadits):
@@ -28,7 +29,7 @@ def removePunct (hadits):
     punct.remove("-")
     punct = ''.join(punct)
     no_punctional = []
-    for i in range (0,300):
+    for i in range (len(hadits)):
         remove_punct = re.compile('[%s]' % re.escape(punctuation)).sub('',hadits[i])
         remove_punct = re.split(r'\s',remove_punct)
         no_punctional.append(remove_punct)
@@ -41,13 +42,13 @@ def stopwordsRemoval (filename,hadits):
     stopword.close()
     sw = [word.strip() for word in sw]
     sw = set(sw)
-    for i in range (0,300):
+    for i in range (len(hadits)):
         stop_remove = [i for i in hadits[i] if i not in sw]
         stopword_remove.append(stop_remove)
     return stopword_remove
 
 def caseFolding (hadits):
-    for i in range (0,300):
+    for i in range (len(hadits)):
         for j in range(len(hadits[i])):
             hadits[i][j] = casefold(hadits[i][j])
     return hadits
