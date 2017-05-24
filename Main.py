@@ -1,9 +1,10 @@
 __author__ = 'elizajasin'
 
+import ReadData as ReadD
 import Preprocessing as PreP
 
 # Preprocessing
-hadits = PreP.readData('hadits_fix.xlsx')
+hadits = ReadD.readData('hadits_fix.xlsx')
 remove_punct = PreP.removePunct(hadits)
 case_fold = PreP.caseFolding(remove_punct)
 stopword_remove = PreP.stopwordsRemoval('id.stopwords.02.01.2016.txt',case_fold)
