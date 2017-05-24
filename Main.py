@@ -12,6 +12,7 @@ case_fold = PreP.caseFolding(remove_punct)
 stopword_remove = PreP.stopwordsRemoval('id.stopwords.02.01.2016.txt',case_fold)
 lemma = PreP.lemmatization(stopword_remove)
 
-
+#Write preprocessing result
+RAWfile.writeData(lemma,"preprocessing_result.xlsx")
 
 print(lemma)
