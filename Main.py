@@ -8,6 +8,6 @@ token = RAWfile.readDataPreprocessing("preprocessing_result.xlsx")
 
 #make feature extraction
 atribut = FE.makeAtribut(token)
-
-print(atribut)
-print(len(atribut))
+FE_result = FE.sumFE(token,atribut)
+RAWfile.writeFEResult(FE_result,"feature_extraction_result.xlsx")
+print(FE_result)

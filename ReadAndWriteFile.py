@@ -34,3 +34,10 @@ def readDataPreprocessing (filename):
         while 'None' in hadits[i]:
             hadits[i].remove('None')
     return hadits
+
+def writeFEResult (atribut, filename):
+    wb = Workbook()
+    ws = wb.active
+    for key in atribut:
+        ws.append(atribut[key])
+    wb.save(filename)
