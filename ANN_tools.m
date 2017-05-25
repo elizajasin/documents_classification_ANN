@@ -6,4 +6,4 @@ class = xlsread('hadits_fix.xlsx','D2:D101');
 data = horzcat(norm_data,class);
 
 % write clear data
-xlswrite('clear_prepro_data.xlsx',data,1)
+% xlswrite('clear_prepro_data.xlsx',data,1)

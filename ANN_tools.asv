@@ -1,2 +1,0 @@
-% read data
-norm_data = xlsread('feature_extraction_norm.xlsx',Sheet)
