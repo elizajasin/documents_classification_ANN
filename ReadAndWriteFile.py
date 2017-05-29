@@ -9,8 +9,8 @@ def readData (filename):
     wb = openpyxl.load_workbook(filename)
     ws = wb.active
     hadits = []
-    for i in range (2,102):
-        hadits.append(str(ws.cell(row=i,column=3).value))
+    for i in range (2,ws.max_row):
+        hadits.append(str(ws.cell(row=i,column=ws.max_column).value))
     return hadits
 
 def writeData (data, filename):
@@ -41,3 +41,13 @@ def writeFEResult (atribut, filename):
     for key in atribut:
         ws.append(atribut[key])
     wb.save(filename)
+
+def readDataClass (filename):
+    os.getcwd
+    wb = openpyxl.load_workbook(filename)
+    ws = wb.active
+    hadits = []
+    for row in range(2, ws.max_row):
+        cell_name = "{}{}".format('D', row)
+        hadits.append(ws[cell_name].value)
+    return hadits
