@@ -2,6 +2,9 @@ __author__ = 'elizajasin'
 
 import ReadAndWriteFile as RAWfile
 import FeatureExtraction as FE
+import NeuralNetwork as NN
+import numpy as np
+import time
 
 #read data from preprocessing
 token = RAWfile.readDataPreprocessing("preprocessing_result.xlsx")
@@ -16,7 +19,34 @@ FE_result = FE.sumFE(token,atribut)
 # manage data before ANN process
 unigram = token
 input_train = []
-for key in FE_result:
-    input_train.append(FE_result[key])
-# class_train = []
-class_train = RAWfile.readDataClass('hadits_fix.xlsx')
+input_norm = RAWfile.readDataInputTrain('clear_prepro_data.xlsx')
+for i in range(0,len(input_norm)):
+    s = []
+    for j in range(0,len(input_norm[i])):
+        if (input_norm[i][j]) == '0':
+            s.append(0)
+        else:
+            s.append(1)
+    input_train.append(s)
+class_train = []
+classes = RAWfile.readDataClass('hadits_fix.xlsx')
+for i in range(0,len(classes)):
+    if classes[i] == 1:
+        class_train.append([1,0,0])
+    elif classes[i] == 2:
+        class_train.append([0,1,0])
+    else:
+        class_train.append([0,0,1])
+
+print(input_train)
+# try ANN
+# X = np.array(input_train)
+# y = np.array(class_train)
+#
+# start_time = time.time()
+#
+#
+# NN.train(X, y, unigram[0], classes[0], hidden_neurons=20, alpha=0.1, epochs=100000, dropout=False, dropout_percent=0.2)
+#
+# elapsed_time = time.time() - start_time
+# print ("processing time:", elapsed_time, "seconds")

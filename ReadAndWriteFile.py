@@ -9,7 +9,7 @@ def readData (filename):
     wb = openpyxl.load_workbook(filename)
     ws = wb.active
     hadits = []
-    for i in range (2,ws.max_row):
+    for i in range (2,102):
         hadits.append(str(ws.cell(row=i,column=ws.max_column).value))
     return hadits
 
@@ -47,7 +47,19 @@ def readDataClass (filename):
     wb = openpyxl.load_workbook(filename)
     ws = wb.active
     hadits = []
-    for row in range(2, ws.max_row):
+    for row in range(2, 102):
         cell_name = "{}{}".format('D', row)
         hadits.append(ws[cell_name].value)
+    return hadits
+
+def readDataInputTrain (filename):
+    os.getcwd
+    wb = openpyxl.load_workbook(filename)
+    ws = wb.active
+    hadits = []
+    for i in range (1,101):
+        s = []
+        for j in range(1, ws.max_column):
+            s.append(str(ws.cell(row=i, column=j).value))
+        hadits.append(s)
     return hadits
