@@ -2,18 +2,21 @@
 from random import seed
 from random import randrange
 from random import random
-from csv import reader
+import os
+import openpyxl
 from math import exp
 
 # Load a CSV file
 def load_csv(filename):
-	dataset = list()
-	with open(filename, 'r') as file:
-		csv_reader = reader(file)
-		for row in csv_reader:
-			if not row:
-				continue
-			dataset.append(row)
+	os.getcwd
+	wb = openpyxl.load_workbook(filename)
+	ws = wb.active
+	dataset = []
+	for i in range(1, ws.max_row+1):
+		s = []
+		for j in range(1, ws.max_column):
+			s.append(str(ws.cell(row=i, column=j).value))
+		dataset.append(s)
 	return dataset
 
 # Convert string column to float
@@ -188,7 +191,7 @@ def save_network(fileName, listData):
 # Test Backprop on Seeds dataset
 seed(1)
 # load and prepare data
-filename = 'Trainset.csv'
+filename = 'Trainset.xlsx'
 # filename = 'Testset.csv'
 dataset = load_csv(filename)
 del dataset[0]

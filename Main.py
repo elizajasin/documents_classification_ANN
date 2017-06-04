@@ -37,16 +37,8 @@ for i in range(0,len(classes)):
         class_train.append([0,1,0])
     else:
         class_train.append([0,0,1])
+RAWfile.writeData(class_train,'data_target.xlsx')
+RAWfile.writeData(input_train,'data_input.xlsx')
 
-print(input_train)
 # try ANN
-# X = np.array(input_train)
-# y = np.array(class_train)
-#
-# start_time = time.time()
-#
-#
-# NN.train(X, y, unigram[0], classes[0], hidden_neurons=20, alpha=0.1, epochs=100000, dropout=False, dropout_percent=0.2)
-#
-# elapsed_time = time.time() - start_time
-# print ("processing time:", elapsed_time, "seconds")
+
