@@ -10,7 +10,7 @@ def readData (filename):
     ws = wb.active
     hadits = []
     for i in range (2,ws.max_row+1):
-        hadits.append(str(ws.cell(row=i,column=ws.max_column).value))
+        hadits.append(str(ws.cell(row=i,column=ws.max_column-1).value))
     return hadits
 
 def writeData (data, filename):
@@ -57,7 +57,7 @@ def readDataInputTrain (filename):
     wb = openpyxl.load_workbook(filename)
     ws = wb.active
     hadits = []
-    for i in range (1,101):
+    for i in range (1,ws.max_row+1):
         s = []
         for j in range(1, ws.max_column):
             s.append(str(ws.cell(row=i, column=j).value))
