@@ -2,7 +2,7 @@
 preprocessing_data = xlsread('feature_extraction_result.xlsx');
 preprocessing_data = preprocessing_data';
 norm_data = normc(preprocessing_data);
-class = xlsread('hadits_fix.xlsx','D2:D502');
+class = xlsread('hadits_fix_2.xlsx','D2:D1297');
 data = horzcat(norm_data,class);
 
 % write clear data
