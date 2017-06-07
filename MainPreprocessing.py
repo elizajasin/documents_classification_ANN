@@ -4,7 +4,7 @@ import ReadAndWriteFile as RAWfile
 import Preprocessing as PreP
 
 # Read Data
-hadits = RAWfile.readData('hadits_fix_3.xlsx')
+hadits = RAWfile.readData('hadits_fix.xlsx')
 
 # Preprocessing
 remove_punct = PreP.removePunct(hadits)
