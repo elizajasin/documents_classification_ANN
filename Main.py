@@ -21,7 +21,7 @@ RAWfile.writeData(input_train,'data_input.xlsx')
 
 # convert data target to biner
 class_train = []
-classes = RAWfile.readDataClass('hadits_fix.xlsx')
+classes = RAWfile.readDataClass('hadits_dist_172.xlsx')
 for i in range(0,len(classes)):
     if classes[i] == 1:
         class_train.append([1,0,0])
