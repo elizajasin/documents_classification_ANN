@@ -41,3 +41,21 @@ def caseFolding (hadits):
         for j in range(len(hadits[i])):
             hadits[i][j] = casefold(hadits[i][j])
     return hadits
+
+def stopword_kbbi (hadits):
+    stopword = open('words_kbbi.txt', encoding='utf-8', mode='r')
+    sw = stopword.readlines()
+    stopword.close()
+    kbbi = []
+    for i in range(len(sw)):
+        kbbi.append(sw[i].strip('\n'))
+    for i in range(len(hadits)):
+        remove_words = []
+        for j in range(len(hadits[i])):
+            if hadits[i][j] not in kbbi:
+                remove_words.append(j)
+        strip = 0
+        for key in remove_words:
+            del hadits[i][key-strip]
+            strip += 1
+    return hadits

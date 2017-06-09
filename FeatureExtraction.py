@@ -6,18 +6,6 @@ def makeAtribut (data):
         for j in range(len(data[i])):
             if data[i][j] not in atribut.keys():
                 atribut[data[i][j]] = []
-    stopword = open('words_kbbi.txt', encoding='utf-8', mode='r')
-    sw = stopword.readlines()
-    stopword.close()
-    kbbi = []
-    remove_words = []
-    for i in range(len(sw)):
-        kbbi.append(sw[i].strip('\n'))
-    for key in atribut:
-        if key not in kbbi:
-            remove_words.append(key)
-    for key in remove_words:
-        del atribut[key]
     return atribut
 
 def sumFE (data, atribut):
