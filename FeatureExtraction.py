@@ -21,6 +21,19 @@ def makeAtributBigram (data):
                     atribut['</s>|' + data[i][j]] = []
     return atribut
 
+def makeAtributTrigram (data):
+    atribut = {}
+    for i in range(len(data)):
+        for j in range(len(data[i])):
+            if (j == 0) and (data[i][j]+'|<s>' not in atribut.keys()):
+                atribut[data[i][j]+'|<s>'] = []
+            else:
+                if data[i][j]+'|'+data[i][j-1] not in atribut.keys():
+                    atribut[data[i][j]+'|'+data[i][j-1]] = []
+                if (j == len(data[i])) and ('</s>|' + data[i][j] not in atribut.keys()):
+                    atribut['</s>|' + data[i][j]] = []
+    return atribut
+
 def sumFE (data, atribut):
     for i in range(len(data)):
         for key in atribut:
@@ -35,13 +48,33 @@ def sumFEBigram (data, atribut):
         for key in atribut:
             atribut[key].append(0)
         for j in range(len(data[i])):
-            if (j == 0) and (data[i][j]+'|<s>' in atribut.keys()):
-                atribut[data[i][j]+'|<s>'][i] += 1
+            if (j == 0) and (data[i][j]+'|<s>' in atribut.keys()) and (atribut[data[i][j]+'|<s>'][i] == 0):
+                atribut[data[i][j]+'|<s>'][i] = 1
+                # atribut[data[i][j] + '|<s>'][i] += 1
             else:
-                if data[i][j]+'|'+data[i][j-1] in atribut.keys():
-                    atribut[data[i][j]+'|'+data[i][j-1]][i] += 1
-                if (j == len(data[i])) and ('</s>|' + data[i][j] in atribut.keys()):
-                    atribut['</s>|' + data[i][j]][i] += 1
+                if (data[i][j]+'|'+data[i][j-1] in atribut.keys()) and (atribut[data[i][j]+'|'+data[i][j-1]][i] == 0):
+                    atribut[data[i][j]+'|'+data[i][j-1]][i] = 1
+                    # atribut[data[i][j] + '|' + data[i][j - 1]][i] += 1
+                if (j == len(data[i])) and ('</s>|' + data[i][j] in atribut.keys()) and (atribut['</s>|' + data[i][j]][i] == 0):
+                    atribut['</s>|' + data[i][j]][i] = 1
+                    # atribut['</s>|' + data[i][j]][i] += 1
+    return atribut
+
+def sumFETrigram (data, atribut):
+    for i in range(len(data)):
+        for key in atribut:
+            atribut[key].append(0)
+        for j in range(len(data[i])):
+            if (j == 0) and (data[i][j]+'|<s>' in atribut.keys()) and (atribut[data[i][j]+'|<s>'][i] == 0):
+                atribut[data[i][j]+'|<s>'][i] = 1
+                # atribut[data[i][j] + '|<s>'][i] += 1
+            else:
+                if (data[i][j]+'|'+data[i][j-1] in atribut.keys()) and (atribut[data[i][j]+'|'+data[i][j-1]][i] == 0):
+                    atribut[data[i][j]+'|'+data[i][j-1]][i] = 1
+                    # atribut[data[i][j] + '|' + data[i][j - 1]][i] += 1
+                if (j == len(data[i])) and ('</s>|' + data[i][j] in atribut.keys()) and (atribut['</s>|' + data[i][j]][i] == 0):
+                    atribut['</s>|' + data[i][j]][i] = 1
+                    # atribut['</s>|' + data[i][j]][i] += 1
     return atribut
 
 def normalisasi (atribut):
