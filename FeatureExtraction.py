@@ -24,14 +24,14 @@ def makeAtributBigram (data):
 def makeAtributTrigram (data):
     atribut = {}
     for i in range(len(data)):
-        for j in range(len(data[i])):
-            if (j == 0) and (data[i][j]+'|<s>' not in atribut.keys()):
-                atribut[data[i][j]+'|<s>'] = []
+        for j in range(1,len(data[i])):
+            if (j == 1) and (data[i][j]+'|<s>,'+data[i][j-1] not in atribut.keys()):
+                atribut[data[i][j]+'|<s>,'+data[i][j-1]] = []
             else:
-                if data[i][j]+'|'+data[i][j-1] not in atribut.keys():
-                    atribut[data[i][j]+'|'+data[i][j-1]] = []
-                if (j == len(data[i])) and ('</s>|' + data[i][j] not in atribut.keys()):
-                    atribut['</s>|' + data[i][j]] = []
+                if data[i][j]+'|'+data[i][j-2]+','+data[i][j-1] not in atribut.keys():
+                    atribut[data[i][j]+'|'+data[i][j-2]+','+data[i][j-1]] = []
+                if (j == len(data[i])) and ('</s>|' + data[i][j-1] + ',' + data[i][j] not in atribut.keys()):
+                    atribut['</s>|' + data[i][j-1] + ',' + data[i][j]] = []
     return atribut
 
 def sumFE (data, atribut):

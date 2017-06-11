@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a645aaa-234e-4e3f-baac-4b1c4670ed87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MainFeatureExtractionTrigram.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clear_prepro_data.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data_input.xlsx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_target.xlsx" afterPath="$PROJECT_DIR$/data_target.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feature_extraction_result.xlsx" afterPath="$PROJECT_DIR$/feature_extraction_result.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hasil ANN.pptx" afterPath="$PROJECT_DIR$/hasil ANN.pptx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/preprocessing_result.xlsx" afterPath="$PROJECT_DIR$/preprocessing_result.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FeatureExtraction.py" afterPath="$PROJECT_DIR$/FeatureExtraction.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main.py" afterPath="$PROJECT_DIR$/Main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clear_data_tools.asv" afterPath="$PROJECT_DIR$/clear_data_tools.asv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clear_data_tools.m" afterPath="$PROJECT_DIR$/clear_data_tools.m" />
     </list>
     <ignored path="TA_Eliza.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,8 +74,8 @@
       <file leaf-file-name="FeatureExtraction.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FeatureExtraction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="66" column="37" lean-forward="true" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
+            <state relative-caret-position="-408">
+              <caret line="33" column="75" lean-forward="true" selection-start-line="33" selection-start-column="75" selection-end-line="33" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -942,8 +931,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FeatureExtraction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="66" column="37" lean-forward="true" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
+        <state relative-caret-position="-408">
+          <caret line="33" column="75" lean-forward="true" selection-start-line="33" selection-start-column="75" selection-end-line="33" selection-end-column="75" />
           <folding />
         </state>
       </provider>
