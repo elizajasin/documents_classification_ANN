@@ -3,6 +3,7 @@ __author__ = 'elizajasin'
 import os
 import openpyxl
 from  openpyxl import Workbook
+import pandas
 
 def readData (filename):
     os.getcwd
@@ -41,6 +42,23 @@ def writeFEResult (atribut, filename):
     for key in atribut:
         ws.append(atribut[key])
     wb.save(filename)
+
+def writeFEResultWithPandas (atribut, filename):
+    ws = []
+    for key in atribut:
+        ws.append(atribut[key])
+    df = pandas.DataFrame(ws)
+    writer = pandas.ExcelWriter(filename)
+    df.to_excel(writer,'Sheet1')
+    writer.save()
+
+def writeFEResultWithTxt (atribut, filename):
+    file = open(filename, 'w')
+    for key in atribut:
+        for i in range(len(atribut[key])):
+            file.write(str(atribut[key][i]) + ' ')
+        file.write('\n')
+    file.close()
 
 def readDataClass (filename):
     os.getcwd

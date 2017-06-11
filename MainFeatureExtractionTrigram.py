@@ -7,8 +7,8 @@ import FeatureExtraction as FE
 token = RAWfile.readDataPreprocessing("preprocessing_result.xlsx")
 
 # make feature extraction
-atribut = FE.makeAtributBigram(token)
-FE_result = FE.sumFEBigram(token,atribut)
-RAWfile.writeFEResult(FE_result,"feature_extraction_result.xlsx")
+atribut = FE.makeAtributTrigram(token)
+FE_result = FE.sumFETrigram(token,atribut)
+RAWfile.writeFEResultWithTxt(FE_result,"feature_extraction_result.txt")
 # FE_norm = FE.normalisasi(FE_result)
 # RAWfile.writeFEResult(FE_norm,"feature_extraction_norm.xlsx")
