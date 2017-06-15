@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a645aaa-234e-4e3f-baac-4b1c4670ed87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PatternMatching.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PatternMatching.py" afterPath="$PROJECT_DIR$/PatternMatching.py" />
     </list>
     <ignored path="TA_Eliza.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,8 +84,8 @@
       <file leaf-file-name="Convert_DectoInt.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/unigram172_biner/Convert_DectoInt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="25" />
+            <state relative-caret-position="302">
+              <caret line="33" column="36" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="33" selection-end-column="36" />
               <folding>
                 <element signature="e#27#36#0" expanded="true" />
               </folding>
@@ -96,8 +96,8 @@
       <file leaf-file-name="PatternMatching.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PatternMatching.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#27#61#0" expanded="true" />
               </folding>
@@ -844,16 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unigram172_biner/Convert_DectoInt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="25" />
-          <folding>
-            <element signature="e#27#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MainPreprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -890,10 +880,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/unigram172_biner/Convert_DectoInt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="33" column="36" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="33" selection-end-column="36" />
+          <folding>
+            <element signature="e#27#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PatternMatching.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#27#61#0" expanded="true" />
           </folding>
