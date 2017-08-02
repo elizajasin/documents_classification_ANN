@@ -5,7 +5,7 @@ import openpyxl
 from openpyxl import Workbook
 
 os.getcwd
-wb = openpyxl.load_workbook('hadits_fix.xlsx')
+wb = openpyxl.load_workbook('hadits_fix_7008.xlsx')
 ws = wb.active
 informasi = []
 anjuran = []
@@ -18,29 +18,29 @@ for i in range (2,ws.max_row+1):
     else:
         larangan.append(str(ws.cell(row=i,column=ws.max_column-1).value))
 
-wb = openpyxl.load_workbook('hadits_fix_2.xlsx')
-ws = wb.active
-for i in range (2,ws.max_row+1):
-    if ws.cell(row=i,column=ws.max_column).value == 1:
-        informasi.append(str(ws.cell(row=i,column=ws.max_column-1).value))
-    elif ws.cell(row=i,column=ws.max_column).value == 2:
-        anjuran.append(str(ws.cell(row=i,column=ws.max_column-1).value))
-    else:
-        larangan.append(str(ws.cell(row=i,column=ws.max_column-1).value))
-
-wb = openpyxl.load_workbook('hadits_fix_3.xlsx')
-ws = wb.active
-for i in range (2,ws.max_row+1):
-    if ws.cell(row=i,column=ws.max_column).value == 1:
-        informasi.append(str(ws.cell(row=i,column=ws.max_column-1).value))
-    elif ws.cell(row=i,column=ws.max_column).value == 2:
-        anjuran.append(str(ws.cell(row=i,column=ws.max_column-1).value))
-    else:
-        larangan.append(str(ws.cell(row=i,column=ws.max_column-1).value))
+# wb = openpyxl.load_workbook('hadits_fix_7008_balance.xlsx')
+# ws = wb.active
+# for i in range (2,ws.max_row+1):
+#     if ws.cell(row=i,column=ws.max_column).value == 1:
+#         informasi.append(str(ws.cell(row=i,column=ws.max_column-1).value))
+#     elif ws.cell(row=i,column=ws.max_column).value == 2:
+#         anjuran.append(str(ws.cell(row=i,column=ws.max_column-1).value))
+#     else:
+#         larangan.append(str(ws.cell(row=i,column=ws.max_column-1).value))
+#
+# wb = openpyxl.load_workbook('hadits_fix_3.xlsx')
+# ws = wb.active
+# for i in range (2,ws.max_row+1):
+#     if ws.cell(row=i,column=ws.max_column).value == 1:
+#         informasi.append(str(ws.cell(row=i,column=ws.max_column-1).value))
+#     elif ws.cell(row=i,column=ws.max_column).value == 2:
+#         anjuran.append(str(ws.cell(row=i,column=ws.max_column-1).value))
+#     else:
+#         larangan.append(str(ws.cell(row=i,column=ws.max_column-1).value))
 
 wb = Workbook()
 ws = wb.active
-for i in range(172):
+for i in range(829):
     data = []
     data.append(informasi[i])
     data.append(1)
@@ -53,7 +53,7 @@ for i in range(172):
     data.append(larangan[i])
     data.append(3)
     ws.append(data)
-wb.save('hadits_dist_172.xlsx')
+wb.save('hadits_dist_829.xlsx')
 
 print(len(informasi))
 print(len(anjuran))

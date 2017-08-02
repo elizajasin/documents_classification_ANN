@@ -4,11 +4,11 @@ import ReadAndWriteFile as RAWfile
 import FeatureExtraction as FE
 
 # read data from preprocessing
-token = RAWfile.readDataPreprocessing("preprocessing_result.xlsx")
+token = RAWfile.readDataPreprocessing("preprocessing_result_829.xlsx")
 
 # make feature extraction
 atribut = FE.makeAtribut(token)
 FE_result = FE.sumFE(token,atribut)
-RAWfile.writeFEResult(FE_result,"feature_extraction_result.xlsx")
+RAWfile.writeFEResultWithTxt(FE_result,"feature_extraction_result_829.txt")
 # FE_norm = FE.normalisasi(FE_result)
 # RAWfile.writeFEResult(FE_norm,"feature_extraction_norm.xlsx")
