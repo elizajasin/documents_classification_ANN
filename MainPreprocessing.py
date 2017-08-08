@@ -4,7 +4,7 @@ import ReadAndWriteFile as RAWfile
 import Preprocessing as PreP
 
 # Read Data
-hadits = RAWfile.readData('hadits_dist_829.xlsx')
+hadits = RAWfile.readData('hadits_merge_fix.xlsx')
 
 # Preprocessing
 remove_punct = PreP.removePunct(hadits)
@@ -14,4 +14,4 @@ lemma = PreP.lemmatization(stopword_remove)
 remove_kbbi = PreP.stopword_kbbi(lemma)
 
 #Write preprocessing result
-RAWfile.writeData(remove_kbbi,"preprocessing_result_829.xlsx")
+RAWfile.writeData(remove_kbbi,"preprocessing_result_merge_fix.xlsx")
