@@ -5,7 +5,7 @@ import openpyxl
 from openpyxl import Workbook
 
 os.getcwd
-wb = openpyxl.load_workbook('hadits_fix.xlsx')
+wb = openpyxl.load_workbook('hadits_v4.xlsx')
 ws = wb.active
 informasi = []
 anjuran = []
@@ -40,7 +40,7 @@ for i in range (2,ws.max_row+1):
 
 wb = Workbook()
 ws = wb.active
-for i in range(243):
+for i in range(550):
     data = []
     data.append(informasi[i])
     data.append(1)
@@ -53,7 +53,7 @@ for i in range(243):
     data.append(larangan[i])
     data.append(3)
     ws.append(data)
-wb.save('hadits_merge_fix.xlsx')
+wb.save('hadits_v4_fix.xlsx')
 
 print(len(informasi))
 print(len(anjuran))
