@@ -1,6 +1,5 @@
 __author__ = 'elizajasin'
 
-import sklearn
 from sklearn.neural_network import MLPClassifier
 
 def training(data_features, data_class):
